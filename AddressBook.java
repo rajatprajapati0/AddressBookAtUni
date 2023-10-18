@@ -54,13 +54,42 @@ public void addData()               //this is for adding data
     }
 
 }
+public void deleteByName(String name)
+{
+    System.out.println("delete data");
+    boolean check=false;
+    try
+    {
+        for(int i=0; i<contacts.length;i++)
+        {
+            if(contacts[i].firstName.equals(name)==true)
+            {
+                contacts[i]=null;
+                check =true;
+                break;
+            }
+            else
+            {
+                check=false;
+            }
+        }
+
+        if(check==true) System.out.println("data deleted");
+        else System.out.println("data not found");
+    }
+    catch (Exception e)
+    {
+        System.out.println("no data found");
+    }
+}
 
 public void editByName(String name)
 {
+    System.out.println("edit data");
 try {
      boolean check=false;
     for (int i = 0; i < contacts.length; i++) {
-        if (contacts[i].firstName.isEmpty() == true)
+        if (contacts[i].equals(null) != true)
         {
             if (contacts[i].firstName.equals(name) == true)
             {

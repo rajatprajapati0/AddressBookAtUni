@@ -8,8 +8,10 @@ public class Main
     {
         AddressBook addressBook=new AddressBook();
         addressBook.addData();
+        addressBook.addData();
         addressBook.show();
         addressBook.editByName("rajat");
+        addressBook.deleteByName("rj");
         addressBook.show();
 
     }
