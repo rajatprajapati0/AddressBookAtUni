@@ -55,6 +55,36 @@ public void addData()               //this is for adding data
 
 }
 
+public void editByName(String name)
+{
+try {
+     boolean check=false;
+    for (int i = 0; i < contacts.length; i++) {
+        if (contacts[i].firstName.isEmpty() == true)
+        {
+            if (contacts[i].firstName.equals(name) == true)
+            {
+                check = true;
+                contacts[i] = getContact();
+            }
+        }
+        else
+        {
+            check = false;
+        }
+
+        }
+          if (check == false)
+           {
+            System.out.println("data not found");
+            }
+ }
+         catch (Exception e)
+               {
+                   System.out.println("search completed");
+                }
+}
+
     public Contact getContact()      //it is for asking user to fill info which are required
     {
         Contact cont=new Contact();
@@ -80,7 +110,7 @@ public void addData()               //this is for adding data
         catch (Exception e)
         {
             ex=true;
-           cont.zip=0;
+        //   cont.zip=0;
             System.out.println("enter again and give numeric value to zip code ");
         }
         return cont;

@@ -9,6 +9,9 @@ public class Main
         AddressBook addressBook=new AddressBook();
         addressBook.addData();
         addressBook.show();
+        addressBook.editByName("rajat");
+        addressBook.show();
+
     }
 
 
